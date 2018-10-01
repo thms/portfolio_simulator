@@ -48,7 +48,8 @@ test('portfolio at given time should be calculated for active loans', () => {
 })
 
 test('portfolio at given time should be calculated for past loans', () => {
-  let value = portfolio.calculateOutstandingAt(4);
+  console.log(portfolio.loans[0])
+  let value = portfolio.calculateOutstandingAt(6);
   expect(value.outstandingPrincipal).toBeCloseTo(0);
   expect(value.outstandingInterest).toBeCloseTo(0);
 })

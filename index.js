@@ -50,6 +50,8 @@ class Portfolio {
     })
   }
 
+  // returns true if the loan has outstanding principal during the months
+  // TODO: remove loans that are in default
   isLoanActive(loan, month) {
     return loan.startingMonth <= month && month < loan.startingMonth + loan.installments.length
   }
